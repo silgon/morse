@@ -15,18 +15,18 @@ endif()
 option(BUILD_CORE_SUPPORT "Build and install morse core" ON)
 option(BUILD_DOC_SUPPORT "Build and install morse documentation (Requiere Sphinx)" OFF)
 
-option(BUILD_POCOLIBS_SUPPORT "Build pocolibs framework support" OFF)
+option(BUILD_POCOLIBS_SUPPORT "Build pocolibs framework support" ON)
 option(BUILD_YARP2_SUPPORT "Build yarp framework support" OFF)
-option(BUILD_ROS_SUPPORT "Build ROS middleware support" OFF)
+option(BUILD_ROS_SUPPORT "Build ROS middleware support" ON)
 option(BUILD_MOOS_SUPPORT "Build MOOS middleware support" OFF)
 option(BUILD_HLA_SUPPORT "Build HLA middleware support. Also used for distributed HLA simulation." OFF)
 
-option(PYMORSE_SUPPORT "Build and install the Python bindings for MORSE." OFF)
+option(PYMORSE_SUPPORT "Build and install the Python bindings for MORSE." ON)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/config/)
 find_package(PkgConfig REQUIRED)
 
-set(PythonInterp_FIND_VERSION 3.2)
+set(PythonInterp_FIND_VERSION 3.3)
 find_package(PythonInterp REQUIRED)
 
 set(PythonLibs_FIND_VERSION "${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}")
