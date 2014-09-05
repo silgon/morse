@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 set(PACKAGE_NAME morse)
-set(PACKAGE_VERSION "1.1")
+set(PACKAGE_VERSION "1.1.1")
 
 # only available from cmake-2.8.4
 if(COMMAND cmake_policy)
@@ -15,13 +15,13 @@ endif()
 option(BUILD_CORE_SUPPORT "Build and install morse core" ON)
 option(BUILD_DOC_SUPPORT "Build and install morse documentation (Requiere Sphinx)" OFF)
 
-option(BUILD_POCOLIBS_SUPPORT "Build pocolibs framework support" ON)
+option(BUILD_POCOLIBS_SUPPORT "Build pocolibs framework support" OFF)
 option(BUILD_YARP2_SUPPORT "Build yarp framework support" OFF)
-option(BUILD_ROS_SUPPORT "Build ROS middleware support" ON)
+option(BUILD_ROS_SUPPORT "Build ROS middleware support" OFF)
 option(BUILD_MOOS_SUPPORT "Build MOOS middleware support" OFF)
 option(BUILD_HLA_SUPPORT "Build HLA middleware support. Also used for distributed HLA simulation." OFF)
 
-option(PYMORSE_SUPPORT "Build and install the Python bindings for MORSE." ON)
+option(PYMORSE_SUPPORT "Build and install the Python bindings for MORSE." OFF)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/config/)
 find_package(PkgConfig REQUIRED)
